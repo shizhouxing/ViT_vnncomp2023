@@ -5,7 +5,6 @@ import shutil
 import argparse
 import csv
 import random
-from tqdm import tqdm
 
 import torch
 import torchvision.transforms as transforms
@@ -54,7 +53,7 @@ if __name__ == '__main__':
         onnx_path = f'onnx/{name}.onnx'
         shutil.copy(f'{path}/model.onnx', onnx_path)
         data = torch.load(f'{path}/data.pt')
-        for i in tqdm(range(model['num_instances'])):
+        for i in range(model['num_instances']):
             vnnlib_path = f'vnnlib/{name}_{indexes[i][1]}.vnnlib'
             x, y = data[0][indexes[i][0]], data[1][indexes[i][0]]
             input_bounds = create_input_bounds(x, 1./255, mean, std)
