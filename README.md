@@ -34,3 +34,15 @@ in proprocessing.
 ```
 python generate_properties.py SEED
 ```
+
+## Reference
+
+If you use this benchmark, please kindly cite our following paper:
+```
+@article{shi2023generalnonlinear,
+  title={Formal Verification for Neural Networks with General Nonlinearities via Branch-and-Bound},
+  author={Shi, Zhouxing and Jin, Qirui and Kolter, J Zico and Jana, Suman and Hsieh, Cho-Jui and Zhang, Huan},
+  journal={2nd Workshop on Formal Verification of Machine Learning (WFVML 2023)},
+  year={2023}
+}
+```
